@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { usePupilsStore } from "@/stores/pupils";
 import { Place, type Pupil } from "./pupil";
-import { promiseHooks } from "v8";
 const pupilStore = usePupilsStore();
 
 interface PupilHappiness {
@@ -37,7 +36,7 @@ function whoIsHappy(): PupilHappiness[] {
                 }
             }
         }
-        if (el.friend1) {
+        if (el.friend3) {
             const f3 = pupilStore.pupilMap.get(el.friend3);
             if (f3) {
                 if (el.place === f3.place) {
